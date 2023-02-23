@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item1 {
+    flex: 1 1 auto;
+    flex-shrink: 1;
+    background-color: blue;
+    height: 200px;
+
+}
+
+.item1:hover{
+    height: 400px;
+    
+    width: 500px;
+    transition: .5s;
+}
+.item2 {
+    flex: 1 1 auto;
+    background-color: green;
+    height: 100px;
+}

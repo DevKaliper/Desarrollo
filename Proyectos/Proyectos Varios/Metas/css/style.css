@@ -1,0 +1,203 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+}
+body .olascontainer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+body .olascontainer .ondas {
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  background: linear-gradient(#FCF1D3, #F3F1F0, #94D956, #EDFB31);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+  overflow: hidden;
+}
+body .olascontainer .ondas span {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 0;
+  width: 340vh;
+  height: 340vh;
+  transform: translate(-50%, -50%);
+}
+body .olascontainer .ondas span:nth-child(1) {
+  border-radius: 45%;
+  background: rgb(20, 20, 20);
+  animation: animate 5s linear infinite;
+}
+body .olascontainer .ondas span:nth-child(2) {
+  border-radius: 40%;
+  background: rgba(20, 20, 20, 0.5);
+  animation: animate 10s linear infinite;
+}
+body .olascontainer .ondas span:nth-child(3) {
+  border-radius: 42.5%;
+  background: rgba(20, 20, 20, 0.5);
+  animation: animate 15s linear infinite;
+}
+body section {
+  min-width: 100%;
+  min-height: 100%;
+  position: relative;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  transform-style: preserve-3d;
+}
+body section .card {
+  position: relative;
+  height: 550px;
+  width: 700px;
+  border-radius: 20px;
+  margin: 50px;
+  overflow: hidden;
+  transition: 1s ease-in-out;
+  transform-style: preserve-3d;
+}
+body section .card:hover .box {
+  transform: rotateY(180deg);
+}
+body section .card .box {
+  transition: 1.3s ease-in-out;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+body section .card .box .imgbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+body section .card .box .imgbox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body section .card .box .contentbox {
+  transform: rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+body section .card .box .contentbox .text {
+  margin: 0 20px;
+  padding: 20px;
+  background: #222;
+  box-shadow: 0 0 10px white, 0 0 30px;
+  transform: translateZ(200px);
+  border-radius: 30px;
+}
+body section .card .box .contentbox .text h2 {
+  font-size: 2em;
+  letter-spacing: 1.5px;
+}
+body section .card .box .contentbox .text p {
+  letter-spacing: 1.5px;
+  font-style: italic;
+  font-weight: 500;
+  padding: 5px;
+  color: white;
+}
+body .starscontainer {
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+body .starscontainer span {
+  z-index: 0;
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  background: white;
+  position: absolute;
+  border-radius: 3px;
+  top: var(--w);
+  right: var(--d);
+  left: var(--a);
+  animation: stars 6s ease-in-out infinite;
+  transition: 0.5s;
+}
+
+#camaro {
+  background: linear-gradient(to top, #FCF1D3, #F3F1F0);
+}
+#camaro .text h2 {
+  background-image: linear-gradient(to bottom, #FCF1D3 2%, gold);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  font-weight: 800;
+}
+
+#ninja {
+  background: linear-gradient(2deg, #94D956, #EDFB31);
+}
+#ninja .text h2 {
+  background-image: linear-gradient(2deg, #94D956, #EDFB31);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  font-weight: 800;
+}
+
+@keyframes stars {
+  0%, 100% {
+    transform: scale(0.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}/*# sourceMappingURL=style.css.map */

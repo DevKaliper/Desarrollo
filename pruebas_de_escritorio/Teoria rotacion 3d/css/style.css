@@ -1,0 +1,119 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 250px;
+  gap: 250px;
+  flex-direction: column;
+}
+body .container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background: skyblue;
+  padding: 5px;
+  perspective: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+body .container::before {
+  position: absolute;
+  content: "Pasa tu mouse por aquí";
+  font-size: 2em;
+  font-weight: 600;
+  transition: 0.5s;
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 1s;
+  z-index: 10000;
+}
+body .container h2 {
+  position: absolute;
+  font-size: 3em;
+  text-transform: uppercase;
+  transition: 1.5s;
+  transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
+}
+body .container .box1, body .container .box2 {
+  width: 100%;
+  height: 100%;
+  background: bisque;
+  transition: 1s;
+}
+body .container:hover {
+  transform: scale(1.5);
+}
+body .container:hover::before {
+  transition: 0s;
+  visibility: hidden;
+  opacity: 0;
+}
+body .container:hover h2 {
+  transition-delay: 0.3s;
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+body .container:hover .box1 {
+  margin-right: 65px;
+  border-radius: 40px;
+  width: 100%;
+  height: 100%;
+  background: bisque;
+  transition: 1s;
+  transition-delay: 0.25s;
+  transform: rotateY(40deg);
+}
+body .container:hover .box2 {
+  margin-left: 65px;
+  border-radius: 40px;
+  width: 100%;
+  height: 100%;
+  background: bisque;
+  transition: 1s;
+  transition-delay: 0.25s;
+  transform: rotateY(-40deg);
+}
+body .translate3d {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: coral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  perspective-origin: 800px;
+}
+body .translate3d h2 {
+  position: absolute;
+}
+body .translate3d .box3 {
+  height: 300px;
+  width: 300px;
+  transition: 1s;
+  transform: translate3d(250px, 250px, 150px);
+  background: cadetblue;
+}
+body .translate3d .box4 {
+  height: 300px;
+  width: 300px;
+  transition: 1s;
+  transform: translate3d(-250px, -250px, -150px);
+  background: cadetblue;
+}/*# sourceMappingURL=style.css.map */

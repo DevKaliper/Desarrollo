@@ -1,0 +1,243 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+body{
+    position: relative;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    // overflow: hidden;
+    .olascontainer{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 100%;
+        min-height: 100%;
+        overflow: hidden;
+
+
+        .ondas{
+            z-index: -1;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            background: linear-gradient( #FCF1D3 , #F3F1F0, #94D956, #EDFB31);
+            box-shadow:  0 0 50px rgba(0,0,0,.5);
+            transition: .5s;
+            overflow: hidden;
+            span{
+                position: absolute;
+                content: "";
+                left: 50%;
+                top: 0;
+                width: 340vh;
+                height: 340vh;
+                transform: translate(-50%, -50%);
+                &:nth-child(1){
+                    border-radius: 45%;
+                    background:rgba(20,20,20,1);
+                    animation: animate 5s linear infinite;
+                    
+                }
+                &:nth-child(2) {
+                    border-radius: 40%;
+                    background: rgba(20,20,20,.5);
+                    animation: animate 10s linear infinite;
+                    
+                }
+                &:nth-child(3) {
+                    border-radius: 42.5%;
+                    background: rgba(20,20,20,.5);
+                    animation: animate 15s linear infinite;
+                    
+                }
+    
+            }
+            
+        }
+
+    }
+    
+    section{
+
+        min-width: 100%;
+        min-height: 100%;
+        position: relative;
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        transform-style: preserve-3d;
+        .card{
+            position: relative;
+            height: 550px;
+            width: 700px;
+            border-radius: 20px;
+            margin: 50px;
+
+            overflow: hidden;
+            transition: 1s ease-in-out;
+            transform-style: preserve-3d;
+            &:hover{
+                .box{
+                    transform: rotateY(180deg);
+                    // backface-visibility: hidden;
+                }
+            }
+            .box{
+                transition: 1.3s ease-in-out;
+                transform-style: preserve-3d;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                .imgbox{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    img{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .contentbox{
+                    
+                    transform: rotateY(180deg);
+                    backface-visibility: hidden;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: #222;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transform-style: preserve-3d;
+                    .text{
+                        margin: 0 20px ;
+                        padding: 20px;
+                        background: #222;
+                        box-shadow: 0 0 10px white,0 0 30px;
+                        transform: translateZ(200px);
+                        border-radius: 30px;
+                        h2{
+                            font-size: 2em;
+                            letter-spacing: 1.5px;
+
+                        }
+                        p{
+                            letter-spacing: 1.5px;
+                            font-style: italic;
+                            font-weight: 500;
+                            padding: 5px;
+                            color: white;
+                        }
+
+
+
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+    
+    .starscontainer{
+        position: absolute;
+
+    
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        span{
+            z-index: 0;
+            display: inline-block;
+            width: 3px;
+            height: 3px;
+            background: white;
+            position: absolute;
+            border-radius: 3px;
+            top: var(--w);
+            right: var(--d);
+            left: var(--a);
+            animation: stars 6s ease-in-out infinite;
+            transition: .5s;
+            
+            
+    
+        }
+    }
+
+}
+
+#camaro{
+    background: linear-gradient(to top, #FCF1D3 , #F3F1F0);
+    .text{
+        h2{
+            background-image: linear-gradient(to bottom, #FCF1D3 2%, gold );
+            background-clip: text;
+            color: transparent;
+            font-weight: 800;
+            
+        }
+    }
+
+}
+#ninja{
+    background: linear-gradient(2deg, #94D956, #EDFB31);
+    .text{
+        h2{
+            background-image: linear-gradient(2deg, #94D956, #EDFB31);
+            background-clip: text;
+            color: transparent;
+            font-weight: 800;
+            
+        }
+    }
+}
+
+
+
+
+@keyframes stars{
+    0%,100%{
+        transform: scale(.2);
+    }
+    50%{
+        transform: scale(1);
+    }
+}
+
+
+@keyframes animate{
+    0%{
+        transform: translate(-50%,-75%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-75%) rotate(360deg);
+    }
+}
