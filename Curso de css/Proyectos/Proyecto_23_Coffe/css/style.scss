@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+
+}
+
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background:  radial-gradient(#555555, #292929);
+
+    label{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height: 150px;
+        background: #3e3e3e;
+        box-shadow: 0 0 0 4px #303030;
+        position: relative;
+        border-radius: 75px;
+        cursor: pointer;
+        input{
+            appearance: none
+            ;
+            
+            &:checked{
+                ~{
+                    span{
+
+                        background-image: url(../img/Coffee_02.png);
+                        left: 150px;
+
+                        transform: rotate(360deg);
+                        background-repeat: no-repeat;
+
+                    }
+                    text{
+                        filter: none;
+                        color: #8f8f8f;
+                        &:last-child{
+                            font-weight: 800;
+                            filter: drop-shadow(0 0 15px #fff) drop-shadow(0 0 35px #fff);
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        span{
+            opacity: 1;
+            
+            position: absolute;
+            left: 0;
+            display: inline-block;
+            background-image: url(../img/Coffee_01.png);
+            background-size: auto 150px;
+            background-repeat: no-repeat;
+            width: 175px;
+            height: 150px;
+            transition: 1s;
+            transform: rotate(-180deg);
+            transform-origin: 75px;
+
+            
+        }
+        text{
+            position: absolute;
+            left: -80px;
+            font-size: 1.3em;
+            color: #fff;
+            font-weight: 800;
+            filter: drop-shadow(0 0 15px #fff) drop-shadow(0 0 35px #fff);
+            transition: 1s;
+            &:last-child{
+                left: initial;
+                right: -80px;
+                filter: none;
+                color: #8f8f8f;
+            }
+        }
+    }
+}

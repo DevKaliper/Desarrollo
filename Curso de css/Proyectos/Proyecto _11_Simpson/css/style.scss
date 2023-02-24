@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    position: relative;
+    background: whitesmoke;
+    // display: flex;
+    // flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+    
+    
+    
+
+}
+
+
+.imgcontainer{
+    // La posicion absoluta me permitio que la imagen se quedara en el fondo y realizara la animacion sin que todo el height de su padre invadiera la pantalla
+    position: absolute;
+
+    overflow: hidden;
+    display: flex;
+    z-index: 0;
+    height: 100%;
+    span{
+        position: relative;
+        
+        
+        // box-shadow: 0 0 0 1px rgb(6, 6, 6,.2);
+
+        animation: animate 15s ease-in infinite;
+        animation-duration: calc(360s/var(--i));
+        
+        transform: rotate(var(--a));
+            
+        }
+        img{
+
+            
+            width: 70px;
+        }
+}
+
+
+
+.simpson{
+    position: relative;
+    background: transparent;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    &::before{
+        content: "";
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        background: linear-gradient(25deg,#FBD316 2%, whitesmoke);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        width: 350px;
+        height: 350px;
+        background: linear-gradient(200deg,#057DC3 2%, whitesmoke);
+        border-radius: 50%;
+        transform: translate(50%, 50%);
+        z-index: -1;
+        
+    }
+    
+    .container{
+        
+        position: relative;
+        border-radius: 15px;
+
+
+        // margin: 20px;
+        box-shadow: 0px 15px 20px rgba(24, 24, 24, .3);
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        padding: 20px;
+        background: rgba(225, 225, 225, 0.1);
+        // ese backdrop filter le da un efecto de difuminado que parece vidrio
+        backdrop-filter: blur(25px);
+        
+        transition: .5s;
+        // overflow: hidden;
+        z-index: 1;
+
+        span{
+            margin-bottom: 15px;
+        }
+        
+        
+
+
+
+        .list{
+
+            position: relative;
+            background: rgba(0, 0, 0, .1);
+            border-radius: 10px;
+            margin-top: 10px;
+            display: flex;
+            height: 100%;
+            padding: 10px;
+            width: 100%;
+            transition: .5s;
+            z-index: 1;
+            &:hover{
+                transform: scale(1.15) translateY(-20px) translateX(20px);
+                margin-top: 10px;
+                background: whitesmoke;
+                box-shadow: 0px 15px 20px rgba(24, 24, 24, .3);
+
+                cursor: pointer;
+                .rank{
+                    visibility: visible;
+                    opacity: 1;
+                    // transition: .5s;
+                }
+
+                .contenido{
+                    color: gray;
+                    transition: .25s;
+                }
+                
+            }
+            
+            
+
+            .contenido{
+                h3{
+                    letter-spacing: .5px;
+                }
+                p{
+                    font-size: .80em;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                }
+
+            }
+
+
+            .imagen {
+                position: relative;
+                width: 60px;
+                height: 60px;
+                border-radius: 5px;
+                overflow: hidden;
+                margin-right: 10px;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                
+            }
+
+            .rank{
+                opacity: 0;
+                visibility: 0;
+                position: absolute;
+                top: 10%;
+                right: 3%;
+                transition: .6s;
+                .ranking{
+                    font-size: 1.80em;
+                    font-weight: 600;
+                    small{
+                        color: #50A4EF;
+                        opacity: .5;
+                    }
+                    span{
+                        color: #50A4EF;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+@keyframes animate{
+    0%{
+        transform: translateY(100vh) scale(0);
+    }
+
+    100%{
+        transform: translateY(-10vh) scale(1);
+    }
+}

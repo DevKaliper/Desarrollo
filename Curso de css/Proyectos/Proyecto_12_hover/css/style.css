@@ -1,0 +1,122 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container {
+  position: relative;
+  min-height: 100vh;
+  min-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background: whitesmoke;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+.container .card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  height: 700px;
+  margin: 20px;
+  width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(225, 225, 225, 0.5);
+  overflow: hidden;
+}
+.container .card::before {
+  position: absolute;
+  content: "Pasa tu mouse por aquí";
+  color: white;
+  font-size: 1.3em;
+  font-style: oblique;
+  font-weight: 400;
+  bottom: 15px;
+  z-index: 10;
+  transition: 0.5s linear;
+  transition-delay: 0.6s;
+}
+.container .card .imgbox img {
+  height: 100vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container .card .content {
+  position: absolute;
+  transition: 1s;
+  transition-delay: 0.36s;
+  bottom: -150px;
+  height: 200px;
+  width: 100%;
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.container .card .content h3 {
+  top: -10px;
+  position: relative;
+  transition: 0.5s;
+  transition-delay: 0.6s;
+  transform: translateY(-150px);
+  color: white;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.3em;
+  font-weight: 500;
+  font-size: 2em;
+  z-index: 100;
+  visibility: hidden;
+}
+.container .card .content h3 span {
+  letter-spacing: 1.5px;
+  text-transform: initial;
+  font-size: 0.8em;
+}
+.container .card .content .redes {
+  position: relative;
+  display: flex;
+  margin-top: 10px;
+  z-index: 10100;
+}
+.container .card .content .redes li {
+  transform: translateY(30px);
+  list-style: none;
+  transition: 0.5s;
+  opacity: 0;
+  transition-delay: calc(0.4s * var(--a));
+}
+.container .card .content .redes li a {
+  margin: 0 20px;
+  color: white;
+  font-size: 1.6em;
+}
+.container .card:hover::before {
+  opacity: 0;
+  visibility: hidden;
+}
+.container .card:hover .content {
+  bottom: 0;
+}
+.container .card:hover .content h3 {
+  transition-delay: 0.8s;
+  visibility: visible;
+  transform: translateY(0px);
+}
+.container .card:hover .content .redes li {
+  transform: translateY(0px);
+  opacity: 1;
+}/*# sourceMappingURL=style.css.map */
