@@ -219,6 +219,127 @@ main .banner3 {
   position: relative;
   height: 100vh;
   width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .banner3 .titulo {
+  display: inline-block;
+  position: absolute;
+  top: 50px;
+  background-image: linear-gradient(135deg, white, #6FB084);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  font-size: 3em;
+  z-index: 100000;
+  box-shadow: inset 0 15px 25px rgba(0, 0, 0, 0.4), -5px 15px 25px rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  padding: 5px 15px;
+}
+main .banner3 .tabcontainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 700px;
+  top: 50px;
+  gap: 20px;
+}
+main .banner3 .tabcontainer .tab {
+  z-index: 1000000;
+  box-shadow: 0 10px 25px rgba(225, 225, 225, 0.1);
+  padding: 20px 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  min-height: 100%;
+  min-width: 100%;
+}
+main .banner3 .tabcontainer .tab:hover label::after {
+  color: #333;
+  font-size: 2em;
+}
+main .banner3 .tabcontainer .tab input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+main .banner3 .tabcontainer .tab input:checked ~ label::after {
+  transform: rotate(135deg);
+  font-size: 2.5em;
+  color: #333;
+}
+main .banner3 .tabcontainer .tab input:checked ~ label h2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  min-width: 100%;
+  height: 100%;
+  font-size: 8em;
+  left: 0;
+  padding: 60px;
+  color: rgba(0, 0, 0, 0.05);
+}
+main .banner3 .tabcontainer .tab input:checked ~ label h3 {
+  background: white;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+main .banner3 .tabcontainer .tab input:checked ~ .content {
+  max-height: 100vh;
+  padding: 25px;
+}
+main .banner3 .tabcontainer .tab input:checked ~ .content p {
+  opacity: 1;
+  color: white;
+  font-size: 1.15em;
+  letter-spacing: 1.5px;
+}
+main .banner3 .tabcontainer .tab label {
+  display: flex;
+  align-items: center;
+  padding: 0 20px 20px;
+  margin: 0px;
+}
+main .banner3 .tabcontainer .tab label::after {
+  transition: tranform 1s;
+  transition: 0.5s;
+  content: "+";
+  position: absolute;
+  right: 20px;
+  color: white;
+  font-size: 1.5em;
+}
+main .banner3 .tabcontainer .tab label h2 {
+  margin-right: 10px;
+  color: white;
+  justify-content: center;
+  display: flex;
+}
+main .banner3 .tabcontainer .tab label h3 {
+  background-image: linear-gradient(to left, #6FB084, white);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+main .banner3 .tabcontainer .tab .content {
+  transition: 1s;
+  max-height: 0px;
+  overflow: hidden;
+}
+main .banner3 .tabcontainer .tab .content p {
+  transition: 1s;
+  opacity: 0;
 }
 main .banner3::before {
   position: absolute;
@@ -231,6 +352,7 @@ main .banner3::before {
   background: linear-gradient(to bottom, #111, transparent);
 }
 main .banner3::after {
+  z-index: 0;
   position: absolute;
   content: "";
   bottom: 0;
