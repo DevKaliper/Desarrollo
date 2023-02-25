@@ -228,7 +228,7 @@ main .banner3 .titulo {
   filter: drop-shadow(0 0 15px white);
   position: absolute;
   top: 50px;
-  background-image: linear-gradient(135deg, white, #6FB084);
+  background-image: linear-gradient(135deg, white, #6fb084);
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
@@ -325,7 +325,7 @@ main .banner3 .tabcontainer .tab label h2 {
   display: flex;
 }
 main .banner3 .tabcontainer .tab label h3 {
-  background-image: linear-gradient(to left, #6FB084, white);
+  background-image: linear-gradient(to left, #6fb084, white);
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
@@ -430,7 +430,7 @@ a.btn {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #537A2D;
+  background: #537a2d;
   border-radius: 5px;
 }
 
