@@ -100,12 +100,12 @@ body {
 				.grid-column {
 					display: flex;
 					flex-direction: column;
-                    align-items: center;
+					align-items: center;
 
 					.product {
 						margin-top: 2rem;
 						position: relative;
-                        width: fit-content;
+						width: fit-content;
 
 						border-radius: 1rem;
 						overflow: hidden;
@@ -117,22 +117,21 @@ body {
 						&:hover,
 						&:focus {
 							box-shadow: 0 0 25px burlywood, 0 0 35px gainsboro;
-                            .product-content{
-                                .product-info{
-                                    .product-price{
-                                        bottom: 0;
-                                    }
-                                }
-                            }
+							.product-content {
+								.product-info {
+									.product-price {
+										bottom: 0;
+									}
+								}
+							}
 						}
 						.product-content {
 							display: flex;
 							align-items: center;
 							padding: 0.64rem 1rem;
 							justify-content: space-between;
-                            transition: 1s ease-in-out;
-                            
-                            
+							transition: 1s ease-in-out;
+
 							.product-info {
 								text-decoration: none;
 								.product-tittle {
@@ -148,16 +147,13 @@ body {
 									color: transparent;
 								}
 								.product-price {
-                                    transition: .25s ease-in-out;
+									transition: 0.25s ease-in-out;
 									margin: 0.5rem 0px;
 									font-style: italic;
 									opacity: 0.7;
-                                    position: relative;
-                                    bottom: -80px;
-                                    font-size: 1.35rem;
-                                    
-                                    
-                                    
+									position: relative;
+									bottom: -80px;
+									font-size: 1.35rem;
 								}
 							}
 							.product-action {
