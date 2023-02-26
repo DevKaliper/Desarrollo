@@ -165,4 +165,10 @@ body main .responsive-container .grid .grid-column .product .product-content .pr
   transition: 0.5s ease;
   font-weight: 900;
   color: rgb(255, 0, 0);
+}
+
+@media (max-width: 600px) {
+  body main .responsive-container .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }/*# sourceMappingURL=style.css.map */
