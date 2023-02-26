@@ -1,0 +1,54 @@
+body{
+    font-family: sans-serif;
+    margin: 0;
+
+}
+a{
+    color: gray;
+    text-decoration: none;
+
+}
+
+header{
+    display: flex;
+    min-height: 70px;
+    background-color: antiquewhite;
+    justify-content: space-between;
+    /* hace que los bloques se separen */
+    align-items: center;
+    padding: 10px;
+    
+}
+
+.logo {
+    display: flex;
+    align-items: center ;
+    
+}
+
+.logo img{
+    height: 50px;
+    margin-right: 10px;
+
+}
+
+
+nav a {
+    font-weight: 600;
+    padding-right: 20px;
+
+}
+
+nav a:hover{
+    color: burlywood;
+}
+
+@media(max-width: 680px)
+    {header{
+        flex-direction: column;
+    }
+
+    nav{
+        padding: 10px 0;
+    }
+}

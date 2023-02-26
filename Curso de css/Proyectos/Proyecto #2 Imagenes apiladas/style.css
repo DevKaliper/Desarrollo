@@ -1,0 +1,99 @@
+body{
+    font-family: sans-serif;
+    background-color: antiquewhite;
+
+}
+
+.imagenes-container{
+    display: flex;
+    justify-content: center;
+    /* centrar hijos  izq-derecha*/
+    height: 100vh;
+    align-items: center;
+
+    
+
+    
+
+}
+
+.imagenes-container .imagen{
+    display: inline-flex;
+    position: relative;
+    margin-right: -20px;
+    flex-direction: column;
+    
+
+
+}
+
+.imagenes-container .imagen img {
+    transition: transform 0.3s ease-in-out;
+    border-radius: 20px;
+    display: flex;
+    width: 150px;
+    height: 150px;
+}
+
+.imagenes-container .imagen .nombre{
+    background-color: azure;
+    border-radius: 10px;
+    color:burlywood;
+    display: none;
+    min-width: 100px;
+    width: 120px;
+    margin-top: -70px;
+    position: absolute;
+    padding: 10px 15px;
+    text-align: center;
+    
+
+
+
+}
+
+
+.imagenes-container .imagen .nombre .Text{
+    display: inline-block;
+    width: fit-content;
+    margin: 0 auto;
+    box-sizing: border-box;
+    
+    
+    
+
+}
+
+
+.imagenes-container .imagen:hover .nombre{
+    display: inline-block;
+    
+
+}
+
+.imagenes-container .imagen .nombre::before{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    left: 40%;
+    top: calc(100%);
+    
+    border-top: 10px solid azure;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.imagenes-container .imagen:hover img{
+    transform: translateY(-8px);
+    
+
+}
+
+@media (max-width: 700px){
+    .imagenes-container{
+        flex-direction: column;
+        
+    }
+}
