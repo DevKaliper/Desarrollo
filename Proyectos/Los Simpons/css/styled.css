@@ -8,19 +8,22 @@
 
 body {
   background: radial-gradient(#f8c947, #f3cc15);
+  min-height: 100vh;
+  min-width: 100vw;
 }
 body main {
   position: relative;
+  perspective: 900px;
+  overflow: hidden;
 }
 body main .FirstSection {
-  min-width: 100vw;
-  height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   transform-style: preserve-3d;
-  perspective: 900px;
+  border-bottom: 3px solid red;
+  overflow: hidden;
 }
 body main .FirstSection .fondo {
   transition: 0.5s ease;
@@ -46,21 +49,38 @@ body main .FirstSection .logo {
 body main .FirstSection .logo .svg {
   width: 70%;
   animation: flotar 4s cubic-bezier(0.39, 0.575, 0.565, 1) infinite alternate;
+  background-color: red;
   transform: rotate(-10deg);
 }
 body main .FirstSection .logo .titulo {
   font-size: 4rem;
   color: white;
   text-transform: uppercase;
-  margin-left: 20px;
+  margin-right: 25px;
   letter-spacing: 1.5px;
 }
-
-@keyframes flotar {
-  0% {
-    transform: translateZ(700px) translateX(450px);
-  }
-  100% {
-    transform: translateY(-5px) translateX(0px) translateZ(0px);
-  }
+body main .SecondSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 0px 30px;
+}
+body main .SecondSection .SS-content {
+  width: 50%;
+}
+body main .SecondSection .img-container {
+  width: 50vw;
+  height: 100vh;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+}
+body main .SecondSection .img-container img {
+  z-index: 11;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=styled.css.map */
