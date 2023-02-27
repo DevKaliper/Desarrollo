@@ -8,56 +8,54 @@
 
 body {
   background: radial-gradient(#f8c947, #f3cc15);
-  min-height: 100vh;
-  min-width: 100vw;
 }
 body main {
   position: relative;
-  perspective: 900px;
   overflow: hidden;
 }
 body main .FirstSection {
   position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 30px;
+  border-bottom: 3px solid red;
+}
+body main .FirstSection .fitBg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: blur(30px);
+  z-index: 0;
+}
+body main .FirstSection .FS-content {
   display: flex;
   align-items: center;
   justify-content: center;
-  transform-style: preserve-3d;
-  border-bottom: 3px solid red;
-  overflow: hidden;
-}
-body main .FirstSection .fondo {
-  transition: 0.5s ease;
-  min-width: 100%;
-  min-height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  position: absolute;
-  top: 0;
-  z-index: 0;
-  right: inherit;
-  filter: blur(20px);
-}
-body main .FirstSection .logo {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  transform-style: preserve-3d;
-  width: 100%;
   height: 100%;
-  position: relative;
+  width: 100%;
+  gap: 30px;
 }
-body main .FirstSection .logo .svg {
-  width: 70%;
+body main .FirstSection .FS-content .svg {
+  position: relative;
+  top: 40px;
+  left: 40px;
+  width: 50%;
   animation: flotar 4s cubic-bezier(0.39, 0.575, 0.565, 1) infinite alternate;
-  background-color: red;
   transform: rotate(-10deg);
 }
-body main .FirstSection .logo .titulo {
+body main .FirstSection .FS-content .titulo {
+  position: relative;
   font-size: 4rem;
   color: white;
   text-transform: uppercase;
-  margin-right: 25px;
+  margin-left: 45px;
   letter-spacing: 1.5px;
+  display: inline-block;
+  text-shadow: 0 0 5px #f8c947, 0 0 10px black;
 }
 body main .SecondSection {
   display: flex;
