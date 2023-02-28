@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+body {
+  position: relative;
+}
+body::before {
+  content: "";
+  width: 332px;
+  height: 332px;
+  position: absolute;
+  top: 10vh;
+  left: 50vw;
+  background: rgb(135, 235, 137);
+  z-index: -1;
+  border-radius: 50%;
+}
+body::after {
+  content: "";
+  width: 332px;
+  height: 332px;
+  position: absolute;
+  top: 60vh;
+  right: 50vw;
+  background: skyblue;
+  z-index: -1;
+  border-radius: 50%;
+}
+body .container {
+  background: transparent;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .container .box {
+  overflow: hidden;
+  position: relative;
+  height: 550px;
+  border-radius: 35px;
+  width: 550px;
+  background: rgba(225, 225, 225, 0.1);
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body .container .box .titulo {
+  position: absolute;
+  top: 70px;
+  background-image: linear-gradient(45deg, rgb(135, 235, 137) 5%, salmon);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+body .container .box .text {
+  width: 100%;
+}
+body .container .box .text span {
+  height: 80px;
+  width: 80px;
+  background: #222;
+}/*# sourceMappingURL=styled.css.map */
