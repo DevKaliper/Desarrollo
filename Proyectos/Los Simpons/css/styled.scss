@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Phudu:wght@300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&family=Walter+Turncoat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Phudu:wght@300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&family=Walter+Turncoat&display=swap");
 
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: 'Walter Turncoat', sans-serif;
+	font-family: "Walter Turncoat", sans-serif;
 }
 
 body {
@@ -56,8 +56,7 @@ body {
 					top: 20px;
 					left: 40px;
 					width: 50%;
-					animation: flotar 10s infinite
-						alternate;
+					animation: flotar 10s infinite alternate;
 					// background-color: red;
 
 					transform: rotate(-5deg);
@@ -70,8 +69,7 @@ body {
 					margin-left: 25px;
 					letter-spacing: 1.5px;
 					display: inline-block;
-					text-shadow:  -2px 3px 2px black, 0 0 15px #f8c947;
-
+					text-shadow: -2px 3px 2px black, 0 0 15px #f8c947;
 				}
 			}
 		}
@@ -91,16 +89,13 @@ body {
 				font-size: 1.7rem;
 				text-align: right;
 				border-radius: 35px;
-				background: rgba(225, 225, 225, .3);
+				background: rgba(225, 225, 225, 0.3);
 				margin-left: 30px;
 				box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
-				p{
+				p {
 					font-weight: 400;
 					text-shadow: 1px 1px 14px #f8c947;
 				}
-
-
-				
 			}
 			.img-container {
 				width: calc(25% + 100px);
@@ -113,20 +108,11 @@ body {
 					width: 100%;
 					height: 100%;
 					object-fit: cover;
-					
 				}
 			}
 		}
 	}
 }
-
-
-
-
-
-
-
-
 
 @media (min-width: 900px) {
 	@keyframes flotar {
