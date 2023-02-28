@@ -8,23 +8,32 @@
 		<link rel="stylesheet" href="./css/styled.css" />
 	</head>
 	<body>
-        <section class="container">
-            <div class="box">
-                <h2 class="titulo"> Calculadora </h2>
-                <div class="text">
-                    <span class="action" id="sumar"></span>
-                    <span class="action" id="restar"></span>
-                    <span class="action" id="multiplica"></span>
-                    <span class="action" id="divide"></span>
+		<section class="container">
+			<div class="box">
+				<h2 class="titulo">Calculadora</h2>
+				<div class="text">
+					<span class="action" id="sumar">
+						<div class="actioncolor">+</div> <div class="op"> Sumar </div>
+					</span>
+					<span class="action" id="restar">
+						<div class="actioncolor"> -</div> <div class="op"> Restar</div>
+					</span>
+					<span class="action" id="multiplica">
+						<div class="actioncolor">*</div> <div class="op"> Multiplicar</div>
+					</span>
+					<span class="action" id="divide"
+						><div class="actioncolor">/</div> <div class="op"> Dividir </div>
+					</span>
+				</div>
+				<div class="values">
+					<input type="text" class="input" id="n1" placeholder="Valor 1" /> <div class="operacion" id="signo"> -- </div>
+					<input type="text" class="input" id="n2" placeholder="Valor 2" />
+				</div>
+				<button id="calcular">Calcular</button>
+                <h3 class="resul"> El resultado es <span id="resp"> -- </span></h3>
+			</div>
+		</section>
 
-                </div>
-                <div class="values">
-                    <input type="text" class="input" id="n1" placeholder="Valor 1">
-                    <input type="text" class="input" id="n2" placeholder="Valor 2">
-                </div>
-                <button> Calcular </button>
-            </div>
-        </section>
 		<script src="./scrip.js"></script>
 	</body>
 </html>
