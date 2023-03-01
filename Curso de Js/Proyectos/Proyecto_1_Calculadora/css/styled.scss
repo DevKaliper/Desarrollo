@@ -1,0 +1,125 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: monospace;
+}
+
+body {
+	background: linear-gradient(45deg, skyblue, white);
+
+	.container {
+		height: 100vh;
+		width: 100vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+
+		.calculator {
+            transition: .5s ease-in-out;
+			position: relative;
+            font-size: 2rem;
+			height: auto;
+			width: auto;
+			padding: 25px;
+			border-radius: 20px;
+			box-shadow: 0 0 30px skyblue;
+			background: white;
+			#display {
+				color: coral;
+				transition: 0.5s ease-in-out;
+				font-size: 3rem;
+				margin: 0 10px;
+				height: 120px;
+				width: auto;
+				display: flex;
+				align-items: flex-end;
+				justify-content: flex-end;
+				font-weight: 800;
+			}
+			#clear {
+				color: white;
+				background: lightcoral;
+			}
+			.btn-number {
+				color: white;
+				background: lightgreen;
+			}
+			.btn-operator {
+				color: white;
+				background: lightpink;
+			}
+			button {
+				border: none;
+				height: 60px;
+				width: 60px;
+				font-size: 1.5rem;
+				border-radius: 30px;
+				margin: 5px;
+				cursor: pointer;
+				transition: all 200ms ease-in-out;
+				&:hover {
+					transform: scale(1.1);
+				}
+			}
+			#equal {
+				height: 130px;
+
+				color: white;
+				background: lightsalmon;
+			}
+			
+
+			// Dark Theme
+
+			&.dark {
+                transition: .5s ease-in-out;
+                background: #181818 ;
+                font-weight: 800;
+                #clear{
+                    background: rgb(255, 89, 71);
+
+                }
+                .btn-number{
+                    background: green;
+                }
+                .btn-operator{
+                    background: rgb(251, 154, 170);
+                }
+                #equal{
+                    background: rgb(254, 89, 28);
+                }
+
+			}
+		}
+	}
+}
+
+
+.theme-toggler{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+    &::before {
+        content: "";
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background: #333;
+        z-index: -1;
+    }
+}
+
+.theme-toggler.active{
+    color: #333;
+    &::before {
+        background: white;
+    }
+}
