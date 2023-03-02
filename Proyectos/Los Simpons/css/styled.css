@@ -125,11 +125,11 @@ body main .ThirdSection .TS-grid .TS-grid-gridColumn {
   align-items: center;
 }
 body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje {
-  padding-top: 15px;
-  max-width: 400px;
   position: relative;
+  padding-top: 15px;
   margin-top: 2rem;
   position: relative;
+  max-height: 800px;
   max-width: 500px;
   background: white;
   border-radius: 1rem;
@@ -140,15 +140,11 @@ body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje {
   border: none;
   box-shadow: -9px -1px 35px -1px rgba(0, 0, 0, 0.46);
 }
-body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje .TS-PersonajeImgContainer {
-  width: 500px;
-}
-body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje .TS-PersonajeImgContainer .TS-PersonajeImgContainer-img {
-  max-width: 100%;
-  display: block;
-}
 body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje:hover, body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje:focus {
   box-shadow: 0 0 25px #f8c947, 0 -20px 35px orange;
+}
+body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje:hover .wave, body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje:focus .wave {
+  top: -500px;
 }
 body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje:hover .TS-Personaje-Content .TS-Personaje-info .TS-Personaje-Aptitudes .TS-Personaje-Aptitudes-Text, body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje:focus .TS-Personaje-Content .TS-Personaje-info .TS-Personaje-Aptitudes .TS-Personaje-Aptitudes-Text {
   bottom: 0;
@@ -156,6 +152,24 @@ body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje:hover .TS-Per
 body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje:hover .TS-Personaje-Content .TS-Personaje-info .TS-Personaje-Aptitudes .TS-Personaje-Aptitudes-Text:nth-child(2), body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje:focus .TS-Personaje-Content .TS-Personaje-info .TS-Personaje-Aptitudes .TS-Personaje-Aptitudes-Text:nth-child(2) {
   border-left: 3px solid #f3cc15;
   border-right: 3px solid #f3cc15;
+}
+body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje .wave {
+  z-index: 1000;
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: 0.5s ease-in-out;
+  transform: rotate(180deg);
+  background-color: transparent;
+}
+body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje .TS-PersonajeImgContainer {
+  width: 500px;
+}
+body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje .TS-PersonajeImgContainer .TS-PersonajeImgContainer-img {
+  max-width: 100%;
+  display: block;
 }
 body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje .TS-Personaje-Content {
   display: flex;
@@ -256,6 +270,8 @@ body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje .TS-Personaje
   body main .ThirdSection .TS-grid {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+@media (min-width: 600px) {
   @keyframes flotar {
     0% {
       transform: rotateY(10deg);
