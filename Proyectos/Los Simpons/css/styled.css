@@ -95,8 +95,167 @@ body main .SecondSection .img-container img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+body main .ThirdSection {
+  max-width: 100vw;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2rem;
+  padding-bottom: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+body main .ThirdSection .TS-tittle .Tittle-text {
+  font-size: 3rem;
+  color: white;
+  text-shadow: -2px 3px 2px black, 0 0 15px #f8c947;
+}
+body main .ThirdSection .TS-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+body main .ThirdSection .TS-grid .TS-grid-gridColumn {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje {
+  padding-top: 15px;
+  max-width: 400px;
+  position: relative;
+  margin-top: 2rem;
+  position: relative;
+  max-width: 500px;
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  text-decoration: none;
+  font-weight: 400;
+  transition: 0.15s ease;
+  border: none;
+  box-shadow: -9px -1px 35px -1px rgba(0, 0, 0, 0.46);
+}
+body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje .TS-PersonajeImgContainer {
+  width: 500px;
+}
+body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje .TS-PersonajeImgContainer .TS-PersonajeImgContainer-img {
+  max-width: 100%;
+  display: block;
+}
+body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje:hover, body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje:focus {
+  box-shadow: 0 0 25px #f8c947, 0 -20px 35px orange;
+}
+body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje:hover .TS-Personaje-Content .TS-Personaje-info .TS-Personaje-Aptitudes .TS-Personaje-Aptitudes-Text, body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje:focus .TS-Personaje-Content .TS-Personaje-info .TS-Personaje-Aptitudes .TS-Personaje-Aptitudes-Text {
+  bottom: 0;
+}
+body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje:hover .TS-Personaje-Content .TS-Personaje-info .TS-Personaje-Aptitudes .TS-Personaje-Aptitudes-Text:nth-child(2), body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje:focus .TS-Personaje-Content .TS-Personaje-info .TS-Personaje-Aptitudes .TS-Personaje-Aptitudes-Text:nth-child(2) {
+  border-left: 3px solid #f3cc15;
+  border-right: 3px solid #f3cc15;
+}
+body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje .TS-Personaje-Content {
+  display: flex;
+  align-items: center;
+  min-width: 100%;
+  justify-content: center;
+  transition: 1s ease-in-out;
+}
+body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje .TS-Personaje-Content .TS-Personaje-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje .TS-Personaje-Content .TS-Personaje-info .TS-Personaje-tittle {
+  position: relative;
+  left: 20px;
+  font-size: 2rem;
+  background-image: linear-gradient(15deg, #f8c947, orange);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje .TS-Personaje-Content .TS-Personaje-info .TS-Personaje-Aptitudes {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+  padding-left: 5px;
+  right: 15px;
+}
+body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje .TS-Personaje-Content .TS-Personaje-info .TS-Personaje-Aptitudes .TS-Personaje-Aptitudes-Text {
+  margin: 0.5rem 0px;
+  font-style: italic;
+  opacity: 0.7;
+  font-size: 1.2rem;
+  position: relative;
+  bottom: -80px;
+  transition: 0.5s ease-in-out;
+}
+body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje .TS-Personaje-Content .TS-Personaje-info .TS-Personaje-Aptitudes .TS-Personaje-Aptitudes-Text:nth-child(3) {
+  padding-left: 10px;
+  transition-delay: 0.45s;
+}
+body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje .TS-Personaje-Content .TS-Personaje-info .TS-Personaje-Aptitudes .TS-Personaje-Aptitudes-Text:nth-child(2) {
+  color: #f8c947;
+  padding: 0px 15px;
+  transition-delay: 0.35s;
+}
+body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje .TS-Personaje-Content .TS-Personaje-info .TS-Personaje-Aptitudes .TS-Personaje-Aptitudes-Text:nth-child(1) {
+  transition-delay: 0.25s;
+}
+body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje .TS-Personaje-Fav {
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+  background: #f3cc15;
+  font-size: 1.35rem;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje .TS-Personaje-Fav:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje .TS-Personaje-Fav:hover ion-icon {
+  transition: 0.5s ease;
+  font-weight: 900;
+  color: rgb(255, 0, 0);
+}
 
-@media (min-width: 900px) {
+#sexy {
+  color: red;
+}
+
+#ned {
+  position: relative;
+  left: calc(50% - 100px);
+}
+
+#apu {
+  position: relative;
+  left: calc(50% - 100px);
+}
+
+#Moe {
+  position: relative;
+  left: calc(50% - 100px);
+}
+
+@media (max-width: 1646px) {
+  body main .ThirdSection .TS-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
   @keyframes flotar {
     0% {
       transform: rotateY(10deg);
