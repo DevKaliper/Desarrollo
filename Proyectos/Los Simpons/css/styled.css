@@ -225,10 +225,11 @@ body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje .TS-Personaje
   transition-delay: 0.25s;
 }
 body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje .TS-Personaje-Fav {
+  transition: 0.5s ease;
   position: absolute;
   bottom: 30px;
   right: 20px;
-  background: #f3cc15;
+  background: rgba(255, 255, 255, 0.9);
   font-size: 1.35rem;
   padding: 5px;
   border: none;
@@ -237,6 +238,17 @@ body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje .TS-Personaje
   align-items: center;
   transition: 0.5s ease;
   cursor: pointer;
+}
+body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje .TS-Personaje-Fav ion-icon {
+  color: red;
+}
+body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje .TS-Personaje-Fav.active {
+  background: #f3cc15;
+}
+body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje .TS-Personaje-Fav.active ion-icon {
+  transition: 0.5s ease;
+  font-weight: 900;
+  color: black;
 }
 body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje .TS-Personaje-Fav:hover {
   background: rgba(255, 255, 255, 0.9);
@@ -262,6 +274,11 @@ body main .ThirdSection .TS-grid .TS-grid-gridColumn .TS-Personaje .TS-Personaje
 }
 
 #Moe {
+  position: relative;
+  left: calc(50% - 100px);
+}
+
+#payaso {
   position: relative;
   left: calc(50% - 100px);
 }
