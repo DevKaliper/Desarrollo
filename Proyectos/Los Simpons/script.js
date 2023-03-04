@@ -1,3 +1,4 @@
+// Favorites button in Third Section
 const favButton = document.querySelectorAll("button");
 
 favButton.forEach((item) => {
@@ -7,3 +8,6 @@ favButton.forEach((item) => {
         
 	};
 });
+// -----------------------------------------------------------------------------
+
+
