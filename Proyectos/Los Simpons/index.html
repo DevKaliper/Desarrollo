@@ -8,14 +8,65 @@
 		<link rel="stylesheet" href="./css/styled.css" />
 	</head>
 	<body>
+		<div class="navegation">
+			<div class="sidebar">
+				<div class="menuToggle">
+					<div class="barratoggle"></div>
+					<div class="barratoggle"></div>
+					<div class="barratoggle"></div>
+				</div>
+				<div class="menu">
+					<ul>
+						<li class="list active" style="--clr:#FFDE00;">
+							<a href="#FirstSection">
+								<span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+								<span class="text">Home</span>
+							</a> 
+						</li>
+						<li class="list" style="--clr:#ffa117;">
+							<a href="#SecondSection">
+								<span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+								<span class="text">About</span>
+							</a>
+						</li>
+						<li class="list" style="--clr:#117CC0;">
+							<a href="#ThirdSection">
+								<span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+								<span class="text">Characters</span>
+							</a>
+						</li>
+						<li class="list" style="--clr:#DA1A26;">
+							<a href="#FourthSection">
+								<span class="icon"><ion-icon name="diamond-outline"></ion-icon></span>
+								<span class="text">Do you like strawberry?</span>
+							</a>
+						</li>
+						<li class="list" style="--clr:#9A8F5D;">
+							<a href="#FifthSection">
+								<span class="icon"><ion-icon name="bag-handle-outline"></ion-icon></span>
+								<span class="text">Products</span>
+							</a>
+						</li>
+						<li class="list" style="--clr:#b145e9;">
+							<a href="#Yourcart">
+								<span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+								<span class="text">Your cart</span>
+							</a>
+						</li>
+					</ul>
+	
+				</div>
+	
+			</div>
+		</div>
 		<main>
-			<section class="FirstSection">
+			<section class="FirstSection" id="FirstSection">
 				<img class="fitBg" src="./img/banner1.jpg" alt="" />
 				<div class="FS-content">
 					<img class="svg" src="img/The_Simpsons_yellow_logo.svg" alt="logo" />
 				</div>
 			</section>
-			<section class="SecondSection">
+			<section class="SecondSection" id="SecondSection">
 				<div class="SS-img-container">
 					<img src="./img/La familia.jpg" alt="familia" />
 				</div>
@@ -31,7 +82,7 @@
 					</p>
 				</div>
 			</section>
-			<section class="ThirdSection">
+			<section class="ThirdSection" id="ThirdSection">
 				<div class="TS-tittle">
 					<h2 class="Tittle-text">Personajes Principales</h2>
 				</div>
@@ -617,7 +668,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="FourthSection">
+			<section class="FourthSection" id="FourthSection">
 				<div class="FourthS-contentBx">
 					<h2 class="FourthStitleText">Marge y Flanders...</h2>
 					<p class="FourthS-text">
@@ -628,7 +679,7 @@
 						<span class="fresa">fresa</span>... En fin
 						<span class="hambre">¿quien tiene hambre?</span>
 					</p>
-					<a class="btn" href="#destination">
+					<a class="btn" href="#FirstSection">
 						<div class="btnfond">Ver video</div></a
 					>
 				</div>
@@ -636,7 +687,7 @@
 					<img src="./img/margeyflanders.jpg" />
 				</div>
 			</section>
-			<section class="FifthSection">
+			<section class="FifthSection" id="FifthSection">
 				<h2 class="FifthSection-tittle">Productos</h2>
 				<div class="FifthSection-Card-container">
 					<div class="FifthSection-Card-container-Main">
