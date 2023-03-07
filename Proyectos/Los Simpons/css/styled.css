@@ -840,6 +840,12 @@ body main .SixthSection .SixthSection-QuestionContainer .SS-Question.active .Six
   opacity: 0;
   visibility: hidden;
 }
+body footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0px;
+}
 
 #sexy {
   color: red;
