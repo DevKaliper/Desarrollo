@@ -8,24 +8,22 @@
 	scroll-behavior: smooth;
 }
 
-
-
 body {
 	background: radial-gradient(#f8c947, #f3cc15);
 
 	.navegation {
 		position: fixed;
-	
+
 		// overflow: hidden;
-	
+
 		background: honeydew;
 		inset: 20px 0px 20px 20px;
 		border-radius: 25px;
 		transition: 0.5s ease;
 		z-index: 200000;
-	
+
 		width: 80px;
-		box-shadow: inset 0 0 5px #ffde00, 0 0 10px rgba(0, 0, 0,.3);
+		box-shadow: inset 0 0 5px #ffde00, 0 0 10px rgba(0, 0, 0, 0.3);
 		.sidebar {
 			max-width: 80px;
 			height: 100%;
@@ -42,19 +40,17 @@ body {
 			justify-content: center;
 			flex-direction: column;
 			border: none;
-			
+
 			padding: 0 23px;
 			transition: 0.25s;
-	
+
 			gap: 0.65rem;
-	
-			
-	
+
 			.barratoggle {
 				background-color: #3d4152;
 				width: 100%;
 				height: 2px;
-	
+
 				transition: all 0.5s;
 				transform-origin: left;
 			}
@@ -71,7 +67,7 @@ body {
 				gap: 10px;
 				width: 100%;
 				li {
-					transition: .5s;
+					transition: 0.5s;
 					list-style: none;
 					position: relative;
 					width: 100%;
@@ -109,7 +105,7 @@ body {
 							line-height: 60px;
 							font-size: 1.75rem;
 							border-radius: 10px;
-	
+
 							color: #3d4152;
 							&::before {
 								content: "";
@@ -139,11 +135,10 @@ body {
 				}
 			}
 		}
-		&.open .sidebar .menuToggle{
+		&.open .sidebar .menuToggle {
 			transform: translateX(5px);
-	
+
 			.barratoggle {
-				
 				&:nth-child(1) {
 					transform: rotate(45deg);
 				}
@@ -155,26 +150,20 @@ body {
 					opacity: 0;
 				}
 			}
-	
-	
 		}
-		&.open{
+		&.open {
 			width: 250px;
 		}
-		&.open ul li.active{
+		&.open ul li.active {
 			transform: translateX(10px);
 		}
-		&.open ul li a{
-			.text{
+		&.open ul li a {
+			.text {
 				opacity: 1;
 				visibility: visible;
 			}
-	
 		}
-		
 	}
-	
-	
 
 	main {
 		position: relative;
@@ -595,7 +584,7 @@ body {
 			flex-direction: column;
 			perspective: 800px;
 			gap: 30px;
-			
+
 			.FifthSection-tittle {
 				display: inline-block;
 				font-size: 5rem;
@@ -723,7 +712,7 @@ body {
 										rotateZ(80deg);
 								}
 								#cuaderno-bart {
-									transform: scale(.7) translateX(75%) translateY(190%)
+									transform: scale(0.7) translateX(75%) translateY(190%)
 										rotateZ(80deg);
 								}
 							}
@@ -789,6 +778,214 @@ body {
 							width: 100%;
 							pointer-events: none;
 						}
+					}
+				}
+			}
+		}
+		.SixthSection {
+			height: 100vh;
+			width: 100vw;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			padding: 20px;
+			margin-top: 50px;
+
+			.SixthSection-fitBg {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+
+				top: 0;
+				left: 0;
+				object-fit: cover;
+				filter: blur(15px);
+				z-index: 0;
+			}
+			.SixthSection-QuestionContainer {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+
+				z-index: 2;
+				height: 100%;
+				width: 75%;
+				// background-color: white;
+				gap: 20px;
+				.SS-Question {
+					position: relative;
+
+					width: 400px;
+					height: auto;
+					background-color: white;
+					padding: 20px;
+					border-radius: 20px;
+					box-shadow: 0 0 15px rgba(255, 255, 255, 0.102);
+
+					
+
+					.SS-Question-tittle {
+
+						h2 {
+							background: transparent;
+							transition: .5s;
+							display: inline-block;
+
+							padding: 5px;
+							border-radius: 10px;
+						}
+						display: flex;
+						align-items: center;
+						gap: 10px;
+						font-size: 1.3rem;
+					}
+					.SS-Question-content {
+						margin-top: 20px;
+						width: 0px;
+						height: 0px;
+						overflow: hidden;
+						font-size: 1.25rem;
+						transition: 0.01s;
+						
+					}
+					.SixthSection-toggle {
+						cursor: pointer;
+						position: absolute;
+						bottom: 20px;
+						right: 20px;
+						width: 40px;
+						height: 20px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						flex-direction: column;
+						border: none;
+						padding: 0 23px;
+						gap: 0.3rem;
+						.SS-toggle {
+							transition: all 0.5s ease;
+							width: 40px;
+							height: 3px;
+							background: black;
+						}
+					}
+					&:nth-child(1) {
+						h2 {
+							background-color: #fbab7e;
+							background-image: linear-gradient(
+								62deg,
+								#fbab7e 0%,
+								#f7ce68 100%
+							);
+						}
+					}
+					&:nth-child(2) {
+						h2 {
+							background-color: #fee140;
+							background-image: linear-gradient(
+								90deg,
+								#fee140 0%,
+								#fa709a 100%
+							);
+						}
+					}
+					&:nth-child(3) {
+						h2 {
+							background-color: #ffe53b;
+							background-image: linear-gradient(
+								147deg,
+								#ffe53b 0%,
+								#ff2525 74%
+							);
+						}
+					}
+					&:nth-child(4) {
+						h2 {
+							background-color: #fad961;
+							background-image: linear-gradient(
+								90deg,
+								#fad961 0%,
+								#f76b1c 100%
+							);
+						}
+					}
+					&.active {
+						color: white;
+						.SS-Question-content {
+							width: fit-content;
+							height: fit-content;
+						}
+						.SS-Question-tittle {
+							h2 {
+								
+								position: absolute;
+								display: block;
+								background: transparent;
+								background-image: none;
+								font-size: 6rem;
+								right: 40px;
+								bottom: 20px;
+								color: rgba(0, 0, 0, 0.106);
+							}
+						}
+						&:nth-child(1) {
+							background-color: #fbab7e;
+							background-image: linear-gradient(
+								62deg,
+								#fbab7e 0%,
+								#f7ce68 100%
+							);
+						}
+						&:nth-child(2) {
+							background-color: #fee140;
+							background-image: linear-gradient(
+								90deg,
+								#fee140 0%,
+								#fa709a 100%
+							);
+						}
+						&:nth-child(3) {
+							background-color: #ffe53b;
+							background-image: linear-gradient(
+								147deg,
+								#ffe53b 0%,
+								#ff2525 74%
+							);
+						}
+						&:nth-child(4) {
+							background-color: #fad961;
+							background-image: linear-gradient(
+								90deg,
+								#fad961 0%,
+								#f76b1c 100%
+							);
+						}
+						.SixthSection-toggle {
+							bottom: 10px;
+							.SS-toggle {
+								background-color: white;
+								transform-origin: left;
+
+								margin: px;
+								&:nth-child(1) {
+									position: relative;
+									top: -12px;
+									transform: rotate(45deg);
+								}
+								&:nth-child(3) {
+									transform: rotate(-45deg);
+								}
+								&:nth-child(2) {
+									transition: 0s;
+									opacity: 0;
+									visibility: hidden;
+								}
+							}
+						}
+
+						
 					}
 				}
 			}
